@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,9 +236,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Try\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +257,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MySpaza.Core\MySpaza.Core.csproj">
+      <Project>{f037720a-5c64-4c3d-84c4-2ea61bde0c8d}</Project>
+      <Name>MySpaza.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySpaza.DataAccess.InMemory\MySpaza.DataAccess.InMemory.csproj">
+      <Project>{c41b53bf-9c29-4a81-85eb-81e8073b9ca8}</Project>
+      <Name>MySpaza.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySpaza.DataAccess.SQL\MySpaza.DataAccess.SQL.csproj">
+      <Project>{444f407f-4044-4745-9ea4-e65aa3397c48}</Project>
+      <Name>MySpaza.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySpaza.Services\MySpaza.Services.csproj">
+      <Project>{b1346751-41e8-4f33-af1e-52fa350e9183}</Project>
+      <Name>MySpaza.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
