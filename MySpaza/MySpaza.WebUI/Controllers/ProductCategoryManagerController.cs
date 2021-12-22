@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MySpaza.Core.Models;
+using MySpaza.Core.Contracts;
 using MySpaza.DataAccess.InMemory;
 
 
@@ -12,10 +13,10 @@ namespace MySpaza.WebUI.Controllers
     public class ProductCategoryManagerController : Controller
     {
         // GET: ProductManager
-        InMemoryRepository<ProductCategory> context;
-        public ProductCategoryManagerController()
+        IRepository<ProductCategory> context;
+        public ProductCategoryManagerController(IRepository<ProductCategory> context)
         {
-            context = new InMemoryRepository<ProductCategory>();
+            this.context = context;
         }
         public ActionResult Index()
         {
