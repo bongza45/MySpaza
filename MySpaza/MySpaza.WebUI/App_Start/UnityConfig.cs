@@ -1,6 +1,7 @@
 using MySpaza.Core.Contracts;
 using MySpaza.Core.Models;
 using MySpaza.DataAccess.InMemory;
+using MySpaza.DataAccess.SQL;
 using System;
 
 using Unity;
@@ -45,8 +46,8 @@ namespace MySpaza.WebUI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IRepository<Product>, InMemoryRepository<Product>>();
-            container.RegisterType<IRepository<ProductCategory>,InMemoryRepository<ProductCategory>>();
+            container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
+            container.RegisterType<IRepository<ProductCategory>, SQLRepository<ProductCategory>>();
         }
     }
 }
