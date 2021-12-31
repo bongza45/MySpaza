@@ -2,6 +2,7 @@ using MySpaza.Core.Contracts;
 using MySpaza.Core.Models;
 using MySpaza.DataAccess.InMemory;
 using MySpaza.DataAccess.SQL;
+using MySpaza.Services;
 using System;
 
 using Unity;
@@ -48,6 +49,10 @@ namespace MySpaza.WebUI
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
             container.RegisterType<IRepository<ProductCategory>, SQLRepository<ProductCategory>>();
+            container.RegisterType<IRepository<Basket>, SQLRepository<Basket>>();
+            container.RegisterType<IRepository<BasketItem>, SQLRepository<BasketItem>>();
+            container.RegisterType<IBasketService,BasketService>();
+
         }
     }
 }
