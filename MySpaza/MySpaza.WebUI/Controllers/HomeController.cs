@@ -17,8 +17,12 @@ namespace MySpaza.WebUI.Controllers
         {
             context = productContext;
             productCategories = productCategoryContext;
-        }        
-        
+        }
+
+        public HomeController()
+        {
+        }
+
         public ActionResult Index(string Category=null)
         {
             List<Product> products;

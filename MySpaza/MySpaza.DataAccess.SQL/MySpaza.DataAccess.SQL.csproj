@@ -61,6 +61,18 @@
     <Compile Include="Migrations\202201070657271_Customer.Designer.cs">
       <DependentUpon>202201070657271_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201101313343_AddOrders.cs" />
+    <Compile Include="Migrations\202201101313343_AddOrders.Designer.cs">
+      <DependentUpon>202201101313343_AddOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201110335354_ClearError.cs" />
+    <Compile Include="Migrations\202201110335354_ClearError.Designer.cs">
+      <DependentUpon>202201110335354_ClearError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201120801539_UpdateOrderTable.cs" />
+    <Compile Include="Migrations\202201120801539_UpdateOrderTable.Designer.cs">
+      <DependentUpon>202201120801539_UpdateOrderTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -84,6 +96,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201070657271_Customer.resx">
       <DependentUpon>202201070657271_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201101313343_AddOrders.resx">
+      <DependentUpon>202201101313343_AddOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201110335354_ClearError.resx">
+      <DependentUpon>202201110335354_ClearError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201120801539_UpdateOrderTable.resx">
+      <DependentUpon>202201120801539_UpdateOrderTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
