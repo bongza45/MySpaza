@@ -10,6 +10,7 @@ using MySpaza.DataAccess.InMemory;
 
 namespace MySpaza.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductCategoryManagerController : Controller
     {
         // GET: ProductManager

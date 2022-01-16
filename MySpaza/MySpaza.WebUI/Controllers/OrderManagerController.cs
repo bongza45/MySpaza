@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MySpaza.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OrderManagerController : Controller
     {
         IOrderService orderService;

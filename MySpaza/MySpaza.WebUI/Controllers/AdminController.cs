@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MySpaza.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         // GET: Admin
